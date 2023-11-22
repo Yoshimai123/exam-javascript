@@ -1,6 +1,6 @@
 function power(base, exponent) {
     try {
-      if (typeof base == "NaN" || typeof exponent == "NaN") {
+      if (typeof base !== "number" || typeof exponent !== "number") {
         throw new Error("Error: You must insert two numbers");
       }
       const result = Math.pow(base, exponent);
@@ -13,5 +13,5 @@ function power(base, exponent) {
     }
   }
 
-  const result = power("aa", 3);
+  const result = power(8, 3);
   console.log(result);
